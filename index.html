@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Insighters</title>
+    <link rel="icon" type="image/x-icon" href="./InsightersLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #EAF2FA;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20vh;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-top: 20px;
+            color: #0588FE; /* Blue color */
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a i {
+             color: #0388FE;
+                margin: 0 10px;
+                font-size: 36px; /* Increase the size of the icons */
+}
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            padding: 12px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: #0388FE;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: Poppins;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #0577E6; /* Darker shade of blue on hover */
+}
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <title>Coming Soon</title>
+</head>
+<body>
+    <div class="container">
+        <img src="InsightersLogo.png" alt="Logo" class="logo">
+        <h2 id="comingSoon">Coming Soon</h2>
+        <h4>A one-stop destination for all things insightful, including news, articles, and networking opportunities.</h4>
+        <p>Join us and become an <span style="font-size: 24px;">"Insighter"</span>.</p>
+        <p><b><i>#IamAnInsighter</i></b></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/insighters.app?igsh=cGFqMnU4ZGxxcm5u" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/insighters_app?t=fxugiJv4RR-L0OZ1ZMRmxA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="notification" id="notification"></div>
+        <form id="emailForm">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Interested</button>
+        </form>
+       
+    </div>
+    <footer>
+        <p>&copy; 2024 Insighters. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
