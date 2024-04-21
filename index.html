@@ -121,6 +121,26 @@
             margin: 0;
         }
 
+        /* Scrollable component for terms and conditions */
+.scrollable-component {
+    display: none;
+    position: fixed;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 1;
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 15px;
+}
+
+        /* Show scrollable component on hover */
+        .input-group2:hover .scrollable-component {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             footer {
                 display: none;
@@ -133,7 +153,7 @@
     <div class="container">
         <img src="InsightersLogo.png" alt="Logo" class="logo">
         <h2 id="comingSoon">Coming Soon...</h2>
-        <h4>A one-stop destination for all things insightful, including news, articles, and networking opportunities.</h4>
+        <h4>A one-stop destination for all insightful things, including news, articles, and networking opportunities.</h4>
         <p>Join us and become an <span style="font-size: 24px;">"Insighter"</span>.</p>
         <p><b><i>#IamAnInsighter</i></b></p>
         <div class="social-icons">
@@ -151,17 +171,25 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="input-group2">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I agree to the Terms & Conditions</label>
+                <input type="checkbox" id="termscheckbox" name="terms" required checked>
+                <label for="terms" class="terms">I agree to the Terms & Conditions</label>
+                <div class="scrollable-component">
+                    <p>
+                    </p> <p>  <b>Secure Data Storage:</b> All user information, including names and email addresses, is stored securely and treated with the utmost confidentiality and care. We employ industry-standard security measures to protect this information from unauthorized access or disclosure.
+                    </p> <p>   <b>No Spam Policy:</b> We adhere to a strict no-spam policy. We do not engage in sending unsolicited emails or marketing communications. Users can rest assured that their inbox will only receive communications that are essential and relevant to their interaction with our platform.
+                    </p> <p>  <b>Data Protection:</b> We comply with all applicable data protection laws and regulations. User data is handled in accordance with our Privacy Policy, which outlines how we collect, use, and protect personal information.
+                    </p> <p>  <b>User Consent:</b> By using our platform and providing us with their information, users consent to the storage and processing of their data as described in our Privacy Policy and these Terms and Conditions.
+                    </p>  <p> <b>Communication:</b> Users may receive emails related to their account, transactions, or updates to our services. These communications are necessary for the proper functioning of our platform and the services we provide.
+                    </p> <p>  <b>Updates to Terms and Conditions:</b> We reserve the right to update or modify these Terms and Conditions at any time. Users will be notified of any changes, and continued use of our platform implies acceptance of the updated terms.
+                    </p> <p><b>Contact Us:</b> If users have any questions or concerns regarding these Terms and Conditions or our privacy practices, they can contact us at [zia.iiits@gmail.com].
+                    </p>
+                </div>
             </div>
             <p>We don't spam your inbox, we promise.</p>
             <button type="submit">Interested</button>
             <div class="success-message" id="successMessage" style="display: none;">Thanks for your interest!</div>
         </form>        
         
-        <div class="scrollable-component" id="scrollableComponent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit a nisi scelerisque commodo.</p>
-          </div>          
        
     </div>
     <footer>
