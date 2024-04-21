@@ -93,13 +93,20 @@
         footer p {
             margin: 0;
         }
+
+        @media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+    
+}
     </style>
     <title>Coming Soon</title>
 </head>
 <body>
     <div class="container">
         <img src="InsightersLogo.png" alt="Logo" class="logo">
-        <h2 id="comingSoon">Coming Soon</h2>
+        <h2 id="comingSoon">Coming Soon...</h2>
         <h4>A one-stop destination for all things insightful, including news, articles, and networking opportunities.</h4>
         <p>Join us and become an <span style="font-size: 24px;">"Insighter"</span>.</p>
         <p><b><i>#IamAnInsighter</i></b></p>
@@ -109,10 +116,13 @@
         </div>
         <div class="notification" id="notification"></div>
         <form id="emailForm">
-            <input type="text" name="name" placeholder="Enter your name" required>
-            <input type="email" name="email" placeholder="Enter your email" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
             <button type="submit">Interested</button>
-        </form>
+            <div class="success-message" id="successMessage" style="display: none;">Thanks for your interest!</div>
+        </form>        
        
     </div>
     <footer>
