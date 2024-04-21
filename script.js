@@ -1,7 +1,15 @@
+function showTermsPopup() {
+    document.getElementById("termsPopup").style.display = "block";
+}
+
+function closeTermsPopup() {
+    document.getElementById("termsPopup").style.display = "none";
+}
+
 document.getElementById('emailForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
 
     // Code to save email to MongoDB or any other database
     console.log('Name:', name);
@@ -9,7 +17,7 @@ document.getElementById('emailForm').addEventListener('submit', function(e) {
 
     // Show notification
     const notification = document.getElementById('notification');
-    notification.textContent = 'Thanks for your interest! Please follow us on Socials';
+    notification.textContent = `Thanks ${name} for your interest! Please follow us on Socials`;
     notification.style.display = 'block';
 
     // Reset form
@@ -20,3 +28,4 @@ document.getElementById('emailForm').addEventListener('submit', function(e) {
         notification.style.display = 'none';
     }, 3000);
 });
+
