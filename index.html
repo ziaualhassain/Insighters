@@ -19,7 +19,7 @@
         }
 
         .container {
-            margin-top: 20vh;
+            margin-top: 5vh;
         }
 
         .logo {
@@ -45,9 +45,9 @@
 
         .social-icons a i {
              color: #0388FE;
-                margin: 0 10px;
-                font-size: 36px; /* Increase the size of the icons */
-}
+             margin: 0 10px;
+             font-size: 36px; /* Increase the size of the icons */
+        }
 
         form {
             margin-top: 20px;
@@ -56,12 +56,39 @@
             align-items: center;
         }
 
-        input {
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .input-group2 {
+             display: flex;
+         align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group2 input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+       
+
+        input[type="text"],
+        input[type="email"] {
             padding: 12px;
-            width: 300px;
+            width: 150px;
             border: none;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin: 5px;
+        }
+
+        label {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #666;
+            display: inline-flex;
+            align-items: center;
         }
 
         button {
@@ -78,7 +105,7 @@
 
         button:hover {
             background-color: #0577E6; /* Darker shade of blue on hover */
-}
+        }
 
         footer {
             background-color: #333;
@@ -95,13 +122,12 @@
         }
 
         @media (max-width: 768px) {
-    footer {
-        display: none;
-    }
-    
-}
+            footer {
+                display: none;
+            }
+        }
     </style>
-    <title>Coming Soon</title>
+    <title>Coming Soon...</title>
 </head>
 <body>
     <div class="container">
@@ -116,13 +142,26 @@
         </div>
         <div class="notification" id="notification"></div>
         <form id="emailForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group2">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms & Conditions</label>
+            </div>
+            <p>We don't spam your inbox, we promise.</p>
             <button type="submit">Interested</button>
             <div class="success-message" id="successMessage" style="display: none;">Thanks for your interest!</div>
         </form>        
+        
+        <div class="scrollable-component" id="scrollableComponent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit a nisi scelerisque commodo.</p>
+          </div>          
        
     </div>
     <footer>
