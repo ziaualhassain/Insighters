@@ -250,8 +250,8 @@
                     </div>
                 </div>
             </div>
-            <p>We don't spam your inbox, we promise.</p>
-            <button type="submit">Interested</button>
+            <p>We don't spam your inbox, we promise<span style="font-size:100%;color:red;">&hearts;</span>.</p>
+            <button type="submit" value="submit" class="sub" id="submit">Interested</button>
             <div class="success-message" id="successMessage" style="display: none;">Thanks for your interest!</div>
         </form>        
         
@@ -260,6 +260,30 @@
     <footer>
         <p>&copy; 2024 Insighters. All rights reserved. Made with <span style="font-size:100%;color:red;">&hearts;</span> in India</p>
     </footer>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    import firebaseConfig from './firebaseConfig.js';
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase(app);
+
+    document.getElementById("submit").addEventListener('click',function(e){
+        set(ref(db,'user/' + document.getElementById("name").value),
+        {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value
+         });
+         
+})
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
