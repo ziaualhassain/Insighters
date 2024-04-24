@@ -3,4 +3,4 @@ A one-stop destination for all insightful things, including news, articles, and 
 
 Join us and become an "Insighter".
 
-# #IamAnInsighter
+#IamAnInsighter
