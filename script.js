@@ -1,3 +1,5 @@
+
+
 function showTermsPopup() {
     document.getElementById("termsPopup").style.display = "block";
 }
